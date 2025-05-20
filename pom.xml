@@ -130,11 +130,10 @@
 				<version>0.8.10</version>
 				<configuration>
 					<excludes>
+						<exclude>**/com/api/orderReceived/config/**</exclude>
 						<exclude>**/com/api/orderReceived/core/dto/**</exclude>
-						<exclude>**/com/api/orderReceived/entrypoint/config/**</exclude>
-						<exclude>**/com/api/orderReceived/presenter/**</exclude>
+						<exclude>**/com/api/orderReceived/event/**</exclude>
 						<exclude>**/com/api/orderReceived/OrderReceivedApplication**</exclude>
-						<exclude>**/com/api/orderReceived/core/domain/exception/ErrorDetail**</exclude>
 					</excludes>
 				</configuration>
 				<executions>

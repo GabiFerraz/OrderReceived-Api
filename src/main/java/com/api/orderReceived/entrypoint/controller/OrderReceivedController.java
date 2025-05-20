@@ -21,7 +21,8 @@ public class OrderReceivedController {
   private final EventPublisher eventPublisher;
 
   @PostMapping
-  public ResponseEntity<String> receiveOrder(@RequestBody @Valid final OrderReceivedRequest request) {
+  public ResponseEntity<String> receiveOrder(
+      @RequestBody @Valid final OrderReceivedRequest request) {
     log.info("Received order request for productSku: {}", request.productSku());
     final var event =
         new OrderReceivedEvent(

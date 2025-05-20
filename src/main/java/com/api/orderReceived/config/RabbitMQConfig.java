@@ -24,7 +24,8 @@ public class RabbitMQConfig {
   }
 
   @Bean
-  public Binding orderReceivedBinding(final Queue orderReceivedQueue, final TopicExchange orderExchange) {
+  public Binding orderReceivedBinding(
+      final Queue orderReceivedQueue, final TopicExchange orderExchange) {
     return BindingBuilder.bind(orderReceivedQueue).to(orderExchange).with(ORDER_RECEIVED_QUEUE);
   }
 }
